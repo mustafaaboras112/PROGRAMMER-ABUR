@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>PROGRAMMER ABURAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --main-color: #FFC107; /* أصفر غامق */
+      --dark-bg: #1E1E1E;     /* أسود فاتح */
+      --light-text: #F5F5F5;
+      --box-color: #2C2C2C;
+      --radius: 12px;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      --transition-speed: 0.4s;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: var(--dark-bg);
+      color: var(--light-text);
+      transition: background var(--transition-speed), color var(--transition-speed);
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 80px; /* مساحة للفوتر */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--box-color);
+      padding: 15px 25px;
+      border-bottom: 2px solid var(--main-color);
+      box-shadow: var(--shadow);
+      animation: slideDown 1s ease-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .header-box {
+      flex: 1;
+    }
+
+    .header-center {
+      text-align: center;
+    }
+
+    .header-center h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: var(--main-color);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 900;
+    }
+
+    .icon-computer {
+      font-size: 2.5em;
+      color: var(--main-color);
+      opacity: 0.8;
+      transition: transform 0.3s ease;
+    }
+
+    .icon-computer:hover {
+      transform: rotate(8deg) scale(1.1);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .resume, .extras, .about, .projects {
+      background: var(--box-color);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transform: scale(0.98);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+      min-width: 300px;
+      flex: 1;
+    }
+
+    .resume:hover, .extras:hover, .about:hover, .projects:hover {
+      transform: scale(1);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .resume img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 15px;
+      border: 3px solid var(--main-color);
+    }
+
+    .resume h2 {
+      text-align: center;
+      color: var(--main-color);
+      margin-bottom: 10px;
+    }
+
+    .resume p {
+      text-align: center;
+      margin: 8px 0;
+    }
+
+    .extras h3, .about h3, .projects h3 {
+      margin-top: 0;
+      color: var(--main-color);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .extras ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .extras li {
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .extras li:hover {
+      transform: translateX(-5px);
+      color: var(--main-color);
+      cursor: pointer;
+    }
+
+    .extras li a {
+      color: var(--light-text);
+      text-decoration: none;
+    }
+
+    .extras li a:hover {
+      color: var(--main-color);
+    }
+
+    .about p, .projects p {
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #bbb;
+      background: #111;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* باركود واتساب ثابت في الزاوية اليسرى السفلى */
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 90px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 10;
+    }
+    .whatsapp-fixed:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .header-box {
+        flex: none;
+        width: 100%;
+        text-align: center !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-box left"></div>
+
+  <div class="header-box header-center">
+    <h1>PROGRAMMER ABURAS</h1>
+  </div>
+
+  <div class="header-box right" style="text-align: right;">
+    <i class="fas fa-laptop-code icon-computer"></i>
+  </div>
+</header>
+
+<div class="container">
+  <section class="resume">
+    <img src="mu.jpeg" alt="صورة شخصية" />
+    <h2>مصطفى أبوراس</h2>
+    <p><strong>المدينة:</strong> إدلب - سوريا</p>
+    <p><strong>الوظيفة:</strong> مطور واجهات أمامية</p>
+    <p><strong>رقم التواصل:</strong> <a href="https://wa.me/9635344116703" target="_blank" style="color: var(--main-color); text-decoration:none;">05344116703</a></p>
+  </section>
+
+  <aside class="extras">
+    <h3>مهاراتي البرمجية:</h3>
+    <ul>
+      <li>🖥️ HTML / CSS / JavaScript</li>
+      <li>📱 Flutter & Dart</li>
+      <li>🧠 تصميم واجهات UI/UX</li>
+      <li>📊 Excel / إدارة بيانات</li>
+      <li>🛠️ العمل على مشاريع حقيقية</li>
+    </ul>
+    <h3>تواصل معي:</h3>
+    <ul>
+      <li>📧 البريد الإلكتروني: <a href="mailto:mustafaeburas8@gmail.com">mustafaeburas8@gmail.com</a></li>
+      <li>🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li>🌐 <a href="https://portfolio.example.com" target="_blank" rel="noopener noreferrer">معرض الأعمال</a></li>
+      <li>💬 <a href="https://wa.me/9635344116703" target="_blank" rel="noopener noreferrer">واتساب مباشر</a></li>
+      <li>🎓 تعلم مستمر: دورات عبر الإنترنت</li>
+    </ul>
+  </aside>
+</div>
+
+<div class="container" style="gap: 40px; margin-top: -10px;">
+  <section class="about">
+    <h3>من أنا؟</h3>
+    <p>
+      أنا مصطفى أبوراس، مطور واجهات أمامية أعمل بشغف على بناء تطبيقات ويب وتطبيقات موبايل جذابة وسهلة الاستخدام. أطمح دائمًا لتطوير مهاراتي والمشاركة في مشاريع مبتكرة ومؤثرة.
+    </p>
+  </section>
+
+  <section class="projects">
+    <h3>مشاريعي</h3>
+    <p>
+      تشمل مشاريعي بناء مواقع إلكترونية متكاملة، وتطبيقات موبايل باستخدام Flutter، وتصميم واجهات مستخدم تفاعلية وسلسة تركز على تجربة المستخدم.
+    </p>
+  </section>
+</div>
+
+<!-- باركود واتساب ثابت -->
+<a href="https://wa.me/9635344116703" target="_blank" rel="noopener noreferrer">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/9635344116703" alt="باركود واتساب" class="whatsapp-fixed" />
+</a>
+
+<footer>
+  &copy; 2025 PROGRAMMER ABURAS - جميع الحقوق محفوظة
+</footer>
+
+</body>
+</html>
