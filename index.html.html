@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- أضفت هذا -->
   <title>PROGRAMMER ABURAS</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
@@ -184,6 +185,7 @@
       transform: scale(1.1);
     }
 
+    /* ميديا كويري للشاشات المتوسطة */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -196,6 +198,42 @@
         flex: none;
         width: 100%;
         text-align: center !important;
+      }
+    }
+
+    /* تحسين تجاوب الشاشات الصغيرة */
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+      }
+
+      .resume, .extras, .about, .projects {
+        min-width: 100%;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 15px;
+      }
+
+      .header-center h1 {
+        font-size: 1.8em;
+      }
+
+      .header-box.right {
+        margin-top: 10px;
+      }
+
+      .resume img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .whatsapp-fixed {
+        width: 60px;
+        bottom: 15px;
+        left: 15px;
       }
     }
   </style>
